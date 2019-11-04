@@ -1,17 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app-root">
+    <my-input v-model="account"></my-input>
+    <my-input v-model="password"></my-input>
+    {{'parent '+account}}
+    {{'parent '+password}}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import myInputVue from './components/my-input.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    'my-input': myInputVue    
+  },
+  data() {
+    return {
+      account: '234',
+      password: '23442'
+    }
   }
 }
 </script>
