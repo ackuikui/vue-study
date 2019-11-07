@@ -1,25 +1,17 @@
 <template>
   <div id="app-root">
-    <my-input v-model="account"></my-input>
-    <my-input v-model="password"></my-input>
-    {{'parent '+account}}
-    {{'parent '+password}}
+    <login></login>
   </div>
 </template>
 
 <script>
-import myInputVue from './components/my-input.vue'
+import loginVue from './pages/login.vue'
+
 
 export default {
   name: 'app',
   components: {
-    'my-input': myInputVue    
-  },
-  data() {
-    return {
-      account: '234',
-      password: '23442'
-    }
+    'login': loginVue    
   }
 }
 </script>

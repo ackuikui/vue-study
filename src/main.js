@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-Vue.config.productionTip = false
+import widget from './components/widget'
+Vue.use(widget)
 
 new Vue({
   render: h => h(App),
